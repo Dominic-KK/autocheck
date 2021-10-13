@@ -21,7 +21,7 @@ def get_status(self):
 
 class answer:
     def __init__(self):
-        username = "xxxxx"   #修改1 账号
+        username = "xxxxx"   #修改1 账号 作者QQ 3330900358 有疑问欢迎随时交流
         password = "xxxxx"   #修改2 密码
         header = {
             "Host": "student.wozaixiaoyuan.com",
