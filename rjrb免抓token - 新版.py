@@ -11,9 +11,9 @@ logger.setLevel(logging.INFO)
 
 def get_status(self):
     if self['code'] == 0:
-        return "健康打卡成功"
+        return "日检日报成功"
     elif self['code'] == 1:
-        return "健康打卡时间结束"
+        return "日检日报时间结束"
     elif self['code'] == -10:
         return "···Token已失效"
     else:
