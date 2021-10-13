@@ -86,7 +86,6 @@ class answer:
     def run(self):
         print(datetime.datetime.now())
         res = requests.post(self.api, headers=self.headers, data=self.data, ).json()  # 打卡提交
-        time.sleep(random.randint(1, 3))
         print(res)
         try:
             msg = MIMEText(self.my_Name+"  "+get_status(res), 'plain', 'utf-8')  # 填写邮件内容
