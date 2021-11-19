@@ -59,8 +59,8 @@ class answer:
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept-Encoding": "gzip, deflate, br",
             "Connection": "keep-alive",
-            "User-Agent": "xxxxx",  #修改6
-            "Referer": "https://servicewechat.com/wxce6d08f781975d91/147/page-frame.html",
+            "User-Agent": "xxxxx",  #修改8
+            "Referer": "xxxxx",  #修改8 抓包获取
             "Content-Length": "360",
             "JWSESSION": str(jwsession),
         }
