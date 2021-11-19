@@ -58,7 +58,7 @@ class answer:
             "Accept-Encoding": "gzip, deflate, br",
             "Connection": "keep-alive",
             "User-Agent": "xxxxx",  #修改6
-            "Referer": "https://servicewechat.com/wxce6d08f781975d91/147/page-frame.html",
+            "Referer": "xxxxx",  #修改6 抓包获取
             "Content-Length": "360",
             "JWSESSION": str(jwsession),
         }
