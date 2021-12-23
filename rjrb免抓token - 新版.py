@@ -20,7 +20,7 @@ def get_status(self):
         return "！！！发生未知错误"
 
 class answer:
-    def __init__(self):      # 使用前请阅读 新版代码注意事项.txt
+    def __init__(self):      # 使用前请阅读 新版必读.txt
         username = "xxxxx"   # 修改1 账号 一般是手机号 作者QQ 3330900358 有疑问欢迎随时交流
         password = "xxxxx"   # 修改2 密码
         header = {
