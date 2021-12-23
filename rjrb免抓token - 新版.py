@@ -20,9 +20,9 @@ def get_status(self):
         return "！！！发生未知错误"
 
 class answer:
-    def __init__(self):
-        username = "xxxxx"   #修改1 账号 作者QQ 3330900358 有疑问欢迎随时交流
-        password = "xxxxx"   #修改2 密码
+    def __init__(self):      # 使用前请阅读 新版代码注意事项.txt
+        username = "xxxxx"   # 修改1 账号 一般是手机号 作者QQ 3330900358 有疑问欢迎随时交流
+        password = "xxxxx"   # 修改2 密码
         header = {
             "Host": "student.wozaixiaoyuan.com",
             "Content-Type": "application/x-www-form-urlencoded",
@@ -30,7 +30,7 @@ class answer:
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language": "en-us,en",
             "Connection": "keep-alive",
-            "User-Agent": "xxxxx",   #修改3
+            "User-Agent": "xxxxx",   # 修改3 抓包获取/从旧版代码复制
             "Content-Length": "360",
         }
         loginUrl = "https://gw.wozaixiaoyuan.com/basicinfo/mobile/login/username"
@@ -57,8 +57,8 @@ class answer:
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept-Encoding": "gzip, deflate, br",
             "Connection": "keep-alive",
-            "User-Agent": "xxxxx",  #修改6
-            "Referer": "xxxxx",  #修改6 抓包获取
+            "User-Agent": "xxxxx",  # 修改8 抓包获取/从旧版代码复制
+            "Referer": "xxxxx",  # 修改9 抓包获取/从旧版代码复制
             "Content-Length": "360",
             "JWSESSION": str(jwsession),
         }
@@ -67,9 +67,9 @@ class answer:
             "seq": self.get_seq(),
             "temperature": self.get_random_temprature(),
 
-            "longitude": "xxxxx",  # 经度
-            "latitude": "xxxxx",  # 纬度
-            "country": "中国",   # 修改7 地址
+            "longitude": "xxxxx",  # 修改10 经度
+            "latitude": "xxxxx",  # 修改11 纬度
+            "country": "中国",   # 修改12 地址
             "province": "xxxxx省",
             "city": "xxxxx市",
             "district": "xxxxx区",
@@ -100,7 +100,7 @@ class answer:
         try:
             msg = MIMEText(self.my_Name+"  "+get_status(res), 'plain', 'utf-8')  # 填写邮件内容
             msg['From'] = formataddr(["我在校园", self.my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
-            msg['To'] = formataddr(["xxxxx", self.my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+            msg['To'] = formataddr(["xxxxx", self.my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号，此处xxx可选择性修改
             msg['Subject'] = get_status(res)  # 邮件的主题，也可以说是标题
 
             server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器
