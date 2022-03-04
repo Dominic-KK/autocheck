@@ -1,6 +1,6 @@
 # 我可以不在校园
 
-​	**友情提示：** 本文章及相关代码仅作为学习使用，使用者若以此进行盈利等，造成后果由使用者自负，均与作者无关。健康生活，认真打卡。作者QQ 3330900358，若学习过程中有相关疑问，欢迎交流。
+​	**友情提示：** 本文章及相关代码仅作为学习使用，使用者若以此进行盈利等，造成后果由使用者自负，均与作者无关。健康生活，认真打卡。作者[QQ 3330900358](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&website=www.oicqzone.com)，若学习过程中有相关疑问，欢迎交流。
 
 ---
 
@@ -12,7 +12,7 @@
 
 ​	本教程灵感来源于生活。
 
-​	此版本为2.0。版本1.0使用抓包获取到的 jwsession 进行登录，而此版本使用账号密码登录，以解决部分用户出现 jwsession 更新频率快的问题。版本1.0的弊端：每次 jwsession 后都需要重新抓取，再写入代码；版本2.0的弊端：代码时而会出现“账号密码错误”的报错，具体情况已在《新版必读.txt》中列出，建议阅读。两个版本各有利弊，均可正常使用，根据自己的实际情况使用即可。
+​	此版本为2.0。版本1.0使用抓包获取到的 jwsession 进行登录，而此版本使用账号密码登录，以解决部分用户出现 jwsession 更新频率快的问题。版本1.0的弊端：每次 jwsession 后都需要重新抓取，再写入代码；版本2.0的弊端：代码时而会出现“账号密码错误”的报错，具体情况已在**《新版必读.txt》**中列出，**建议阅读**。两个版本各有利弊，均可正常使用，根据自己的实际情况使用即可。
 
 ​	**所有文件以及相关代码已在文件列表上传，下载即可使用**
 
@@ -26,13 +26,13 @@
 
 蓝奏云链接：https://dominic.lanzouq.com/iKszLzyh5gh
 
-下载后解压，先双击 FiddlerSetup.exe 进行安装，另一个是证书生成器，暂时不用。
+下载后解压，先双击 `FiddlerSetup.exe` 进行安装，另一个是证书生成器，暂时不用。
 
-打开 Fiddler ，点击工具栏中的 Tools → Options
+打开 Fiddler ，点击工具栏中的 `Tools` → `Options`
 
 <img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802134532161-1627956867319.png" alt="1.1.1"  />
 
-点击 HTTPS 标签，勾选框住的三项，然后点击右边的 Actions，选择第二项，会弹出一个弹窗，点击确定，之后点击 OK 完成设置
+点击 `HTTPS` 标签，勾选框住的三项，然后点击右边的 `Actions`，选择第二项，会弹出一个弹窗，点击确定，之后点击 `OK` 完成设置
 
 <img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802140021903.png" alt="1.1.2"  />
 
@@ -40,31 +40,31 @@
 
 <img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802140437482.png" alt="1.1.3"  />
 
-打开电脑上任何一个浏览器，在这里我用的是 win10 自带的 Edge，打开设置，找到“证书管理”，实在找不到也可以直接搜索
+打开电脑上任何一个浏览器，在这里我用的是 win10 自带的 Edge，打开设置，找到`证书管理`，实在找不到也可以直接搜索
 
 <img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802140839373.png" alt="1.1.4"  />
 
-点击“管理证书”，点击“导入”进入证书导入向导
+点击`管理证书`，点击`导入`进入证书导入向导
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802140839373.png" alt="1.1.5"  />
+<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802141018230.png" alt="1.1.5" style="zoom:67%;" />
 
-点击下一步继续
+点击`下一页`继续
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802141018230.png" alt="1.1.6" style="zoom:67%;" />
+<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802141144696.png" alt="1.1.6" style="zoom:67%;" />
 
-选择要导入的文件，点击“浏览”
+点击`浏览`，选择要导入的文件
 
 <img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802141332680.png" alt="1.1.7" style="zoom:67%;" />
 
-在桌面找到刚刚导出的证书文件，点一下证书文件，选择打开
+在桌面找到刚刚导出的证书文件，点一下证书文件，选择`打开`
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802141332680.png" alt="1.1.8" style="zoom:67%;" />
+<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802141716446.png" alt="1.1.8" style="zoom:67%;" />
 
-之后一直点击下一步，直到完成证书导入。到这里配置工作基本完成，可以进行抓包了，刚刚导出在桌面的证书文件也可以删除
+之后一直点击`下一步`，直到完成证书导入。到这里配置工作基本完成，可以进行抓包了，刚刚导出在桌面的证书文件也可以删除
 
 #### 2.抓包
 
-接下来从微信电脑端打开我在校园小程序，然后打开日检日报或者健康打卡，会发现 Fiddler 中显示了很多内容，我们找到“student.wozaixiaoyuan.com”这一行，双击打开，在右边选择“Headers”标签，复制 User-Agent（设备信息）、Referer（学校信息）。
+接下来从微信电脑端打开我在校园小程序，然后打开日检日报或者健康打卡，会发现 Fiddler 中显示了很多内容，我们找到`student.wozaixiaoyuan.com`这一行，双击打开，在右边选择`Headers`标签，复制 `User-Agent（设备信息）`、`Referer（学校信息）`。
 
 ![1.2.1](https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802145622192.png)
 
@@ -76,11 +76,11 @@
 
 用QQ邮箱发件也需要登录，不是用账号密码，而是授权码（更安全），接下来获取授权码
 
-进入QQ邮箱网页版，进入设置，选择账户
+进入QQ邮箱网页版，进入`设置`，选择`账户`
 
 <img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802152812320.png" alt="2.1.1" style="zoom:67%;" />
 
-往下翻找到 POP3……服务，确保第一项是“已开启”状态，如果不是，点击后面的开启，然后选择下面的“生成授权码”
+往下翻找到 `POP3/SMTP服务`，确保第一项是`已开启`状态，如果不是，点击后面的开启，然后选择下面的`生成授权码`
 
 <img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802152944128.png" alt="2.1.2" style="zoom:67%;" />
 
@@ -98,15 +98,23 @@
 
 <img src="https://gitee.com/dominic548/picgo/raw/master/uTools/2022213-132154-1644729713565.png" alt="3.1.1" style="zoom:67%;" />
 
-#### 2.日检日报
+#### 2.打卡题目
+
+在代码文件中，预设了基本通用的题目答案，但打卡题目不一定都相同，若和下图的题目相同，则无需修改代码。**否则一定要修改代码，请[QQ联系作者](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&website=www.oicqzone.com)。**
+
+<img src="https://gitee.com/dominic548/picgo/raw/master/uTools/202234-153629-6a3b683f81c3935e90edc30217daced.jpg" style="zoom:50%;" />
+
+<img src="https://gitee.com/dominic548/picgo/raw/master/uTools/202234-153633-5bdfa20bf3ae5b6a1c4332974b51b7d.jpg" style="zoom:50%;" />
+
+#### 3.日检日报
 
 代码中的“xxx”部分都需要手动填入，其中包括上面步骤中保存的那些内容，**代码文件已上传至文件列表**，**下载即可编辑使用**。
 
-#### 3.健康打卡
+#### 4.健康打卡
 
 代码中的“xxx”部分都需要手动填入，其中包括上面步骤中保存的那些内容，**代码文件已上传至文件列表**，**下载即可编辑使用**。
 
-#### 4.定位签到
+#### 5.定位签到
 
 定位签到由作者 [**小白**](https://gitee.com/smallway) 协助完成，使用方法可参考本教程的 v1.0 版本，点击链接跳转：[ 我在校园定位签到](https://gitee.com/smallway/autosign)。
 
@@ -150,13 +158,17 @@
 
 <img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210803083310441.png" alt="4.1.7" style="zoom:67%;" />
 
-触发周期选择自定义，这里要输入 Cron 表达式，健康打卡是每天一次，只要过了零点就可以打卡，所以 Cron 表达式是 0 01 00 * * * *，表示每天00:01运行一次代码；日检日报是每天三次，这里根据我们学校的时间，我写的是 0 35 6,12,19 * * * *，表示每天6:35、12:35、19:35各运行一次；其他设置保持默认即可，点击提交。
+触发周期选择自定义，这里要输入 Cron 表达式，健康打卡是每天一次，只要过了零点就可以打卡，所以 Cron 表达式是 `0 01 00 * * * *`，表示每天00:01运行一次代码；日检日报是每天三次，这里根据我们学校的时间，我写的是 `0 35 6,12,19 * * * *`，表示每天6:35、12:35、19:35各运行一次；其他设置保持默认即可，点击提交。
 
-教程到这里就结束了，如果需要其他时间打卡，可以直接更改 Cron表达式，为了方便大家更改，关于 Cron 表达式的语法下面也讲解一下
+教程到这里就结束了，如果需要其他时间打卡，可以直接更改 Cron表达式，为了方便大家更改，关于 Cron 表达式的语法在下面也讲解一下
 
 <img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210803083504283.png" alt="4.1.8" style="zoom:67%;" />
 
-#### 3.Cron表达式
+### 五、Q&A
+
+最后在这里放一个问答板块，如果大家有什么问题可以在评论区提问（评论区可能回复不及时，推荐使用qq联系），我会定期更新在这里
+
+#### 1.Cron表达式
 
 Cron表达式有7个字段，以空格分割
 
@@ -186,11 +198,9 @@ Cron表达式有7个字段，以空格分割
 | :------: | :--: | :--: | :--: | :--: | :--: | :--------: | :--: |
 |   含义   | 0秒  | 01分 | 0时  | 每日 | 每月 | 每星期每天 | 每年 |
 
-### 五、Q&A
 
-最后在这里放一个问答板块，如果大家有什么问题可以在评论区提问（评论区可能回复不及时，推荐使用qq联系），我会定期更新在这里
 
-#### ·如何第一时间收到QQ邮件？
+#### 2.如何第一时间收到QQ邮件
 
 如果每次都打开邮箱网页查看打卡状态，那自然很麻烦，最简单的方法就是手机下载QQ邮箱客户端，并打开消息提醒，这样每次代码运行结束都能及时收到打卡状态。如果不想下载软件，也可以用微信的QQ邮件提醒，不过这需要一些设置：
 
@@ -201,3 +211,12 @@ Cron表达式有7个字段，以空格分割
 绑定好之后，点击微信上方的搜索，搜“QQ邮箱提醒”功能并启用，这样就可以在微信收到邮件了
 
 <img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210803091352067.png" alt="5.1.2" style="zoom:67%;" />
+
+#### 3.下载了QQ邮箱APP后，邮箱公众号收不到邮箱消息了
+
+进入qq邮箱app，点开头像，选择新邮件提醒，拉到下面选择你的qq邮箱账号，然后关闭下面的仅在qq邮箱客户端提醒，然后公众号就可以正常接收信息了。
+
+#### 4.errorcode
+
+若出现类似于`{"errorCode":1,"errorMessage":"Traceback (most recent call last):\n ......,"statusCode":443} `的错误，可尝试重新建一个云函数，即重复`步骤四`
+
