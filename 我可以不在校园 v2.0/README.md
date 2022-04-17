@@ -2,17 +2,11 @@
 
 # 公告
 
-解放双手的路上总会有磕磕绊绊，不过我们都会尽力解决。
+### 因微信和小程序平台更新，自动打卡目前失效，项目暂停使用，请期待“我可以不在校园3.0”
 
-关于对邮件“发生未知错误！！！”的解决，v2.1已经连夜发布
+### 欢迎关注我的个人博客：[DominicKK](https://dominickk.gitee.io/)
 
-直达电梯：在v2.0（v1.0均可）的基础上，在`self.data`中添加`"timestampHeader": int(time.time()),`即可，如图：
-
-<img src="https://gitee.com/dominickk/picgo/raw/master/picgoCore/image-20220418013254272.png" alt="image-20220418013254272" style="zoom: 67%;" />
-
-欢迎关注我的个人博客：[DominicKK](https://dominickk.gitee.io/)
-
-**- 2022.04.18  01:33 -**
+#####  - 2022.04.17 -
 
 ---
 
