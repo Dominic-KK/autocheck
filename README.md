@@ -8,9 +8,9 @@
 
 直达电梯：在v2.0（v1.0均可）的基础上，在`self.data`中添加`"timestampHeader": int(time.time()),`即可，如图：
 
-<img src="https://gitee.com/dominickk/picgo/raw/master/picgoCore/image-20220418013254272.png" alt="image-20220418013254272" style="zoom: 67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/picgoCore/image-20220418013254272.png" alt="image-20220418013254272" style="zoom: 67%;" />
 
-欢迎关注我的个人博客：[DominicKK](https://dominickk.gitee.io/)
+欢迎关注我的个人博客：[DominicKK](https://cnblogs.com/dominickk/)
 
 **- 2022.04.18  01:33 -**
 
@@ -36,7 +36,7 @@
 
 ​	**所有文件以及相关代码已在文件列表上传，下载即可使用**
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/uTools/2022213-130940-1644728979852.png" alt="image-20220213130917422" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/uTools/2022213-130940-1644728979852.png" alt="image-20220213130917422" style="zoom:67%;" />
 
 ### 一、Fiddler 抓包工具
 
@@ -50,35 +50,35 @@
 
 打开 Fiddler ，点击工具栏中的 `Tools` → `Options`
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802134532161-1627956867319.png" alt="1.1.1"  />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802134532161-1627956867319.png" alt="1.1.1"  />
 
 点击 `HTTPS` 标签，勾选框住的三项，然后点击右边的 `Actions`，选择第二项，会弹出一个弹窗，点击确定，之后点击 `OK` 完成设置
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802140021903.png" alt="1.1.2"  />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802140021903.png" alt="1.1.2"  />
 
 这时会发现桌面上多了一个证书文件（如下图），接下来马上会用到
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802140437482.png" alt="1.1.3"  />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802140437482.png" alt="1.1.3"  />
 
 打开电脑上任何一个浏览器，在这里我用的是 win10 自带的 Edge，打开设置，找到`证书管理`，实在找不到也可以直接搜索
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802140839373.png" alt="1.1.4"  />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802140839373.png" alt="1.1.4"  />
 
 点击`管理证书`，点击`导入`进入证书导入向导
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802141018230.png" alt="1.1.5" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802141018230.png" alt="1.1.5" style="zoom:67%;" />
 
 点击`下一页`继续
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802141144696.png" alt="1.1.6" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802141144696.png" alt="1.1.6" style="zoom:67%;" />
 
 点击`浏览`，选择要导入的文件
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802141332680.png" alt="1.1.7" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802141332680.png" alt="1.1.7" style="zoom:67%;" />
 
 在桌面找到刚刚导出的证书文件，点一下证书文件，选择`打开`
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802141716446.png" alt="1.1.8" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802141716446.png" alt="1.1.8" style="zoom:67%;" />
 
 之后一直点击`下一步`，直到完成证书导入。到这里配置工作基本完成，可以进行抓包了，刚刚导出在桌面的证书文件也可以删除
 
@@ -86,7 +86,7 @@
 
 接下来从微信电脑端打开我在校园小程序，然后打开日检日报或者健康打卡，会发现 Fiddler 中显示了很多内容，我们找到`student.wozaixiaoyuan.com`这一行，双击打开，在右边选择`Headers`标签，复制 `User-Agent（设备信息）`、`Referer（学校信息）`。
 
-![1.2.1](https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802145622192.png)
+![1.2.1](http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802145622192.png)
 
 复制的内容可以发给你的工具人小伙伴，或者你的小号，总之先保留下来备用。
 
@@ -98,15 +98,15 @@
 
 进入QQ邮箱网页版，进入`设置`，选择`账户`
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802152812320.png" alt="2.1.1" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802152812320.png" alt="2.1.1" style="zoom:67%;" />
 
 往下翻找到 `POP3/SMTP服务`，确保第一项是`已开启`状态，如果不是，点击后面的开启，然后选择下面的`生成授权码`
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802152944128.png" alt="2.1.2" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802152944128.png" alt="2.1.2" style="zoom:67%;" />
 
 根据提示验证后，得到授权码，和抓包步骤一样，把授权码复制保存下来备用。
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802153128652.png" alt="2.1.3" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802153128652.png" alt="2.1.3" style="zoom:67%;" />
 
 ### 三、Python 代码
 
@@ -116,15 +116,15 @@
 
 需要填写经纬度，可以通过百度的拾取坐标系统获取：[拾取坐标系统 (baidu.com)](https://api.map.baidu.com/lbsapi/getpoint/index.html)
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/uTools/2022213-132154-1644729713565.png" alt="3.1.1" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/uTools/2022213-132154-1644729713565.png" alt="3.1.1" style="zoom:67%;" />
 
 #### 2.打卡题目
 
 在代码文件中，预设了基本通用的题目答案，但打卡题目不一定都相同，若和下图的题目相同，则无需修改代码。**否则一定要修改代码，请[QQ联系作者](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&website=www.oicqzone.com)。**
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/uTools/202234-153629-6a3b683f81c3935e90edc30217daced.jpg" style="zoom:50%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/uTools/202234-153629-6a3b683f81c3935e90edc30217daced.jpg" style="zoom:50%;" />
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/uTools/202234-153633-5bdfa20bf3ae5b6a1c4332974b51b7d.jpg" style="zoom:50%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/uTools/202234-153633-5bdfa20bf3ae5b6a1c4332974b51b7d.jpg" style="zoom:50%;" />
 
 #### 3.日检日报
 
@@ -146,29 +146,29 @@
 
 进入腾讯云先登录，搜索云函数
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802160948779.png" alt="4.1.1" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802160948779.png" alt="4.1.1" style="zoom:67%;" />
 
 管理控制台
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802161241550.png" alt="4.1.2" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802161241550.png" alt="4.1.2" style="zoom:67%;" />
 
 函数服务 → 新建
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210802161459839.png" alt="4.1.3" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210802161459839.png" alt="4.1.3" style="zoom:67%;" />
 
 选择自定义创建，函数名称可以改一下，方便区分，这里用健康打卡做例子，由于名称不能写中文，所以就写了健康打卡的拼音缩写
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210803080018644.png" alt="4.1.4" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210803080018644.png" alt="4.1.4" style="zoom:67%;" />
 
 往下翻，函数代码选择在线编辑，把刚刚编辑好的代码粘贴在这里
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210803080356200.png" alt="4.1.5" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210803080356200.png" alt="4.1.5" style="zoom:67%;" />
 
 其他设置保持默认即可，然后点击完成。这样就把代码部署在腾讯云上了，可以尝试运行一下，直接点击测试按钮，立马就能收到一封邮件，提示打卡状态
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210803081027997.png" alt="4.1.6" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210803081027997.png" alt="4.1.6" style="zoom:67%;" />
 
-![image-20210803081034094](https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210803081034094.png)
+![image-20210803081034094](http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210803081034094.png)
 
 #### 2.定时触发
 
@@ -176,13 +176,13 @@
 
 触发管理 → 创建触发器
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210803083310441.png" alt="4.1.7" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210803083310441.png" alt="4.1.7" style="zoom:67%;" />
 
 触发周期选择自定义，这里要输入 Cron 表达式，健康打卡是每天一次，只要过了零点就可以打卡，所以 Cron 表达式是 `0 01 00 * * * *`，表示每天00:01运行一次代码；日检日报是每天三次，这里根据我们学校的时间，我写的是 `0 35 6,12,19 * * * *`，表示每天6:35、12:35、19:35各运行一次；其他设置保持默认即可，点击提交。
 
 教程到这里就结束了，如果需要其他时间打卡，可以直接更改 Cron表达式，为了方便大家更改，关于 Cron 表达式的语法在下面也讲解一下
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210803083504283.png" alt="4.1.8" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210803083504283.png" alt="4.1.8" style="zoom:67%;" />
 
 ### 五、Q&A
 
@@ -226,11 +226,11 @@ Cron表达式有7个字段，以空格分割
 
 首先确保微信和QQ号已经绑定，找到【设置】-【账号与安全】-【更多安全设置】来绑定QQ号
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210803090822826.png" alt="5.1.1" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210803090822826.png" alt="5.1.1" style="zoom:67%;" />
 
 绑定好之后，点击微信上方的搜索，搜“QQ邮箱提醒”功能并启用，这样就可以在微信收到邮件了
 
-<img src="https://gitee.com/dominic548/picgo/raw/master/Typora/image-20210803091352067.png" alt="5.1.2" style="zoom:67%;" />
+<img src="http://dominickk.oss-cn-hangzhou.aliyuncs.com/oldimgbed/Typora/image-20210803091352067.png" alt="5.1.2" style="zoom:67%;" />
 
 #### 3.下载了QQ邮箱APP后，邮箱公众号收不到邮箱消息了
 
