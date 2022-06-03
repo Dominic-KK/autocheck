@@ -14,7 +14,7 @@ VERSION 3.2
 
 友链：[小白 (smallway) - Gitee.com](https://gitee.com/smallway)
 
-**- 2022.06.03 16:38 -**
+- **2022.06.03 16:38 -**
 
 ---
 
@@ -32,7 +32,7 @@ VERSION 3.2
 
  **所有文件以及相关代码已在文件列表上传，下载即可使用**
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031846-Untitled-adb.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-a23.png)
 
 ### 一、Fiddler 抓包工具
 
@@ -46,35 +46,35 @@ VERSION 3.2
 
 打开 Fiddler ，点击工具栏中的 `Tools` → `Options`
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031846-Untitled 1-25a.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-55f.png)
 
 点击 `HTTPS` 标签，勾选框住的三项，然后点击右边的 `Actions`，选择第二项，会弹出一个弹窗，点击确定，之后点击 `OK` 完成设置
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031846-Untitled 2-5c0.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-208.png)
 
 这时会发现桌面上多了一个证书文件（如下图），接下来马上会用到
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031846-Untitled 3-196.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-a6b.png)
 
 打开电脑上任何一个浏览器，在这里我用的是 win10 自带的 Edge，打开设置，找到`证书管理`，实在找不到也可以直接搜索
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031846-Untitled 4-959.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-f29.png)
 
 点击`管理证书`，点击`导入`进入证书导入向导
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031846-Untitled 5-3fb.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-5bb.png)
 
 点击`下一页`继续
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031846-Untitled 6-ea3.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-142.png)
 
 点击`浏览`，选择要导入的文件
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031846-Untitled 7-6b4.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-e23.png)
 
 在桌面找到刚刚导出的证书文件，点一下证书文件，选择`打开`
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 8-ce6.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-d6a.png)
 
 之后一直点击`下一步`，直到完成证书导入。到这里配置工作基本完成，可以进行抓包了，刚刚导出在桌面的证书文件也可以删除
 
@@ -82,7 +82,9 @@ VERSION 3.2
 
 接下来从微信电脑端打开我在校园小程序，然后打开日检日报或者健康打卡，会发现 Fiddler 中显示了很多内容，我们找到`student.wozaixiaoyuan.com`这一行，双击打开，在右边选择`Headers`标签，复制 `User-Agent（设备信息）`、`Referer（学校信息）`。
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 9-b18.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-d2c.png)
+
+1.2.1
 
 复制的内容可以发给你的工具人小伙伴，或者你的小号，总之先保留下来备用。
 
@@ -94,15 +96,15 @@ VERSION 3.2
 
 进入QQ邮箱网页版，进入`设置`，选择`账户`
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031846-Untitled 10-c57.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-9b5.png)
 
 往下翻找到 `POP3/SMTP服务`，确保第一项是`已开启`状态，如果不是，点击后面的开启，然后选择下面的`生成授权码`
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 11-245.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-3ed.png)
 
 根据提示验证后，得到授权码，和抓包步骤一样，把授权码复制保存下来备用。
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031849-Untitled 12-b3d.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-ff9.png)
 
 ### 三、Python 代码
 
@@ -112,15 +114,15 @@ VERSION 3.2
 
 需要填写经纬度，可以通过百度的拾取坐标系统获取：[拾取坐标系统 (baidu.com)](https://api.map.baidu.com/lbsapi/getpoint/index.html)
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 13-8a4.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-ee8.png)
 
 ### 2.打卡题目
 
 在代码文件中，预设了基本通用的题目答案，但打卡题目不一定都相同，若和下图的题目相同，则无需修改代码。**否则一定要修改代码，请[QQ联系作者](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&website=www.oicqzone.com)。**
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 14-f21.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-aa8.png)
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 15-1f6.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-4d7.png)
 
 ### 3.日检日报
 
@@ -142,37 +144,37 @@ VERSION 3.2
 
 进入阿里云先登录，搜索`函数计算FC`
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031848-Untitled 16-cb6.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-074.png)
 
 开通并进入管理界面
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 17-480.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-3b3.png)
 
 创建一个新服务，名称自定义，其他设置默认即可
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 18-bbd.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-f01.png)
 
 进入到刚刚创建的服务，创建一个新函数
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 19-34f.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-edb.png)
 
 按照图示进行设置
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 20-887.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-de2.png)
 
-这里尤其注意：一定要选择弹性实例，涉及到免费额度（下文会做解释）
+这里尤其注意：一定要选择**弹性实例**，涉及到免费额度（`Q6`会做解释）
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031848-Untitled 21-0c4.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-c9d.png)
 
 创建完成后双击打开代码文件，将上面修改好的代码粘贴进去
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 22-7d1.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-f77.png)
 
 部署并调用，会收到邮件
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 23-279.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-01f.png)
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 24-b56.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-643.png)
 
 ### 2.定时触发
 
@@ -180,13 +182,13 @@ VERSION 3.2
 
 触发器管理 → 创建触发器
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 25-c94.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-b20.png)
 
 触发周期选择自定义，这里要输入 Cron 表达式，健康打卡是每天一次，只要过了零点就可以打卡，所以 Cron 表达式是 `CRON_TZ=Asia/Shanghai 0 01 00 * * *`，表示每天00:01运行一次代码；日检日报是每天三次，这里根据我们学校的时间，我写的是 `CRON_TZ=Asia/Shanghai 0 35 6,12,19 * * * *`，表示每天6:35、12:35、19:35各运行一次；其他设置保持默认即可，点击提交。
 
 教程到这里就结束了，如果需要其他时间打卡，可以直接更改 Cron表达式，为了方便大家更改，关于 Cron 表达式的语法在下面的`Q&A`中也讲解一下
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 26-0a2.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-1aa.png)
 
 ### 五、Q&A
 
@@ -233,11 +235,11 @@ Cron表达式有7个字段，以空格分割
 
 首先确保微信和QQ号已经绑定，找到【设置】-【账号与安全】-【更多安全设置】来绑定QQ号
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 27-f6e.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-833.png)
 
 绑定好之后，点击微信上方的搜索，搜“QQ邮箱提醒”功能并启用，这样就可以在微信收到邮件了
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 28-fd8.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-d18.png)
 
 ### 3.下载了QQ邮箱APP后，邮箱公众号收不到邮箱消息了
 
@@ -257,9 +259,9 @@ Cron表达式有7个字段，以空格分割
 
 参考上文中使用阿里云函数的步骤之后，将腾讯云的代码复制到阿里云，修改代码中的`main_handler`为`handler` ，具体操作：在编辑器中按下键盘上的`ctrl + H` 调出查找替换，点击全部替换；之后填写触发器Cron表达式也应当注意两边的差异，详情参考`Q1：Cron表达式`
 
-![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031847-Untitled 29-413.png)
+![Untitled](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-9f9.png)
 
-### 6.阿里云函数计算FC免费额度
+### 7.阿里云函数计算FC免费额度
 
 详情参考[官方帮助文档](https://help.aliyun.com/document_detail/54301.html)  
 
