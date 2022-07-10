@@ -2,6 +2,23 @@
 
 # 公告
 
+**Bugfix**：`{'code': 1, 'message':‘未获取街道信息，请重试"}`
+
+在self.data中添加两个参数， 注意是英文标点符号
+
+```python
+"areacode":"",	# 市
+"towncode":"",	# 街道
+```
+
+**两个参数的内容可参考文件`code.csv`**
+
+ps：参数为空貌似也行
+
+- **2022.07.09 22:48 -**
+
+---
+
 VERSION 3.2
 
 3.x本版本代码的编写由作者[smallway 小白]([https://gitee.com/smallway](https://gitee.com/smallway)) 完成，相较于2.x版本的可读性更好，报错信息更完善。

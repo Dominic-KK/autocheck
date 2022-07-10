@@ -52,7 +52,7 @@ def get_status(self):
 
 
 class answer:
-    def __init__(self):      #
+    def __init__(self):
         username = str(我在校园用户名)
         password = str(我在校园密码)
         header = {
