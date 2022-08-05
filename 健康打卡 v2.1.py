@@ -11,9 +11,9 @@ logger.setLevel(logging.INFO)
 
 def get_status(self):
     if self['code'] == 0:
-        return "日检日报成功"
+        return "健康打卡成功"
     elif self['code'] == 1:
-        return "日检日报时间结束"
+        return "健康打卡时间结束"
     elif self['code'] == -10:
         return "···Token已失效"
     else:
@@ -31,6 +31,7 @@ class answer:
             "Accept-Language": "en-us,en",
             "Connection": "keep-alive",
             "User-Agent": "xxxxx",   # 修改3 抓包获取/从旧版代码复制
+            "Referer": "https://servicewechat.com/wxce6d08f781975d91/147/page-frame.html",
             "Content-Length": "360",
         }
         loginUrl = "https://gw.wozaixiaoyuan.com/basicinfo/mobile/login/username"
@@ -42,6 +43,7 @@ class answer:
         if res["code"] == 0:
             print("Login success.")
             jwsession = respt.headers['JWSESSION']
+            # return jwsession
         else:
             print(res)
             print('Login failed.')
@@ -51,7 +53,7 @@ class answer:
         self.my_pass = 'xxxxx'  # 修改6 发件人邮箱授权码
         self.my_user = 'xxxxx'  # 修改7 收件人邮箱账号
 
-        self.api = "https://student.wozaixiaoyuan.com/heat/save.json"
+        self.api = "https://student.wozaixiaoyuan.com/health/save.json"
         self.headers = {
             "Host": "student.wozaixiaoyuan.com",
             "Content-Type": "application/x-www-form-urlencoded",
@@ -63,33 +65,22 @@ class answer:
             "JWSESSION": str(jwsession),
         }
         self.data = {
+            "timestampHeader": int(time.time()),
             "answers": '["0"]',
-            "seq": self.get_seq(),
-            "temperature": self.get_random_temprature(),
 
-            "longitude": "xxxxx",  # 修改10 经度
-            "latitude": "xxxxx",  # 修改11 纬度
+            "latitude": "xxxxx", # 修改10 纬度
+            "longitude": "xxxxx", # 修改11 经度
             "country": "中国",   # 修改12 地址
             "province": "xxxxx省",
             "city": "xxxxx市",
             "district": "xxxxx区",
         }
 
-    # 获取随机体温
-    def get_random_temprature(self):
-        random.seed(time.ctime())
-        return "{:.1f}".format(random.uniform(36.2, 36.7))
-
-    # seq的1,2,3代表早，中，晚
     def get_seq(self):
         current_hour = datetime.datetime.now()
         current_hour = current_hour.hour + 8
-        if 6 <= current_hour <= 9:
+        if 0 <= current_hour <=18:
             return "1"
-        elif 12 <= current_hour < 15:
-            return "2"
-        elif 19 <= current_hour < 22:
-            return "3"
         else:
             return 1
 
@@ -100,7 +91,7 @@ class answer:
         try:
             msg = MIMEText(self.my_Name+"  "+get_status(res), 'plain', 'utf-8')  # 填写邮件内容
             msg['From'] = formataddr(["我在校园", self.my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
-            msg['To'] = formataddr(["xxxxx", self.my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号，此处xxx可选择性修改
+            msg['To'] = formataddr(["xxxxx", self.my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号，这里的xxx可选择性修改
             msg['Subject'] = get_status(res)  # 邮件的主题，也可以说是标题
 
             server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器
@@ -115,7 +106,6 @@ class answer:
 
 if __name__ == "__main__":
     answer().run()
-
 
 def main_handler(event, context):
     logger.info('got event{}'.format(event))
