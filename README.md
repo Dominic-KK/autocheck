@@ -1,4 +1,4 @@
-# :rose:我可以不在校园:rose:
+# 🌹我可以不在校园🌹
 
 ## :loudspeaker:公告
 
