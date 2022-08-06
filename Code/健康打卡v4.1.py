@@ -1,3 +1,4 @@
+import base64
 import datetime
 import json
 import logging
@@ -36,13 +37,13 @@ logger.setLevel(logging.INFO)
 
 def get_status(self):
     if self['code'] == 0:
-        return "健康打卡成功"
+        return "哎！健康打卡成了！"
     elif self['code'] == 1:
-        return "健康打卡时间结束"
+        return "晚了，一切都晚了"
     elif self['code'] == -10:
-        return "···JWS失效"
+        return "···我喊破喉咙都登录不了哇"
     else:
-        return "！！！发生未知错误"
+        return "！！！快来看看，这咋滴了"
 
 
 class answer:
@@ -91,7 +92,7 @@ class answer:
         }
         self.data = json.dumps({
             "t1": self.get_random_temprature(),
-            "t2": QRcode,
+            "t2": self.upload_img(),
             "type": 0,
             "locationType": 1,
             "signArea": signArea,
@@ -99,6 +100,38 @@ class answer:
             "city": city,
             "district": district,
         })
+
+    # 检查图片是否存在
+    def isImage(self, image):
+        if image == "":
+            print("〇 No image. Download test image now……")
+            from urllib.request import urlretrieve
+            urlretrieve(
+                "https://th.bing.com/th/id/OIP.3Z0rpHpGBoHf9ECKS5FRwwHaHa?w=188&h=188&c=7&r=0&o=5&dpr=1.25&pid=1.7",
+                '/tmp/testImage.jpg')
+            image = "/tmp/testImage.jpg"
+            print("√ Download test image complete.")
+        return image
+
+    def imageDecode(self, image):
+        with open(image, 'rb') as f:
+            image_byte = base64.b64encode(f.read())
+        image_de = image_byte.decode('ascii')
+        return image_de
+
+    # 上传图片
+    def upload_img(self):
+        url = "https://gw.wozaixiaoyuan.com/gw/aoss/uploadBase64"
+        data = json.dumps({
+            "bucket": "health",
+            "base64": "data:image/jpeg;base64," + self.imageDecode(self.isImage(QRcode)),
+        })
+        res = requests.post(url, headers=self.headers, data=data).json()
+        if res['code'] == 0:
+            print("√ Upload image success.")
+        else:
+            print("× Upload image failed!")
+        return res['data']
 
     # 随机体温
     def get_random_temprature(self):
@@ -116,7 +149,10 @@ class answer:
     def run(self):
         # @FileName: 健康打卡4.0.py
         res = requests.post(self.api, headers=self.headers, data=self.data).json()  # 打卡提交
-        print(res)
+        if res['code'] == 0:
+            print("√ Check in success.")
+        else:
+            print("× Check in failed!!!")
         try:
             msg = MIMEText(self.my_Name+"  "+get_status(res), 'plain', 'utf-8')
             msg['From'] = formataddr(["我在校园", self.my_sender])  # 双引号内是发件人昵称，可以自定义
@@ -126,7 +162,9 @@ class answer:
             server.login(self.my_sender, self.my_pass)
             server.sendmail(self.my_sender, [self.my_user, ], msg.as_string())
             server.quit()  # 关闭邮箱连接
+            print("√ Send email success.")
         except Exception:
+            print("× Send email failed!")
             print(res)
             res = False
             print(res)

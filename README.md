@@ -1,16 +1,16 @@
 # 🌹我可以不在校园🌹
 
-## :loudspeaker:公告
+## 📢公告
 
-:newspaper:**VERSION 4.0**
+📰**VERSION 4.1**
 
-- 由于业务更新，旧的版本逐渐无法使用，至此请全部转到本版本。
-
-- 如有学习之前版本的需求，可以点击分支或标签。
+- 由于业务更新，旧的版本逐渐无法使用，至此请全部转到本版本😮。
+- 船新的4.x版精简了教程（尤其是去掉了复杂的抓包过程），增加了代码日志输出，美化了文档，使得整体更加好用和银杏🐣。
+- 本版本搞定了图片的上传，使你的打卡更真实😃。
+- 学习过程中有任何疑问，请优先从文档最后的`Q&A`寻找答案，两位作者都有自己的事情，不一定能随时回复😄。
+- 如有学习之前版本的需求，可以点击分支或标签😗。
 
 <img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051946-c5f.png" alt="image-20220805194627169" style="zoom: 67%;" />
-
-- 学习过程中有任何疑问，请优先从文档最后的`Q&A`寻找答案，两位作者都有自己的事情，不一定能随时回复:smile:。
 
 - 作者DominicKK  [QQ 3330900358:link:](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&[website=www.oicqzone.com](http://website/%3Dwww.oicqzone.com/))
 
@@ -26,19 +26,19 @@
 
 ---
 
-## :bell:**特别声明**
+## 🔔**特别声明**
 
-:heavy_exclamation_mark:  本仓库发布的文章及代码等全部内容，仅用于测试和学习研究，禁止用于商业用途，作者不保证其准确性、完整性以及合法性，请使用者依个人情况自行合理判断。
+❗  本仓库发布的文章及代码等全部内容，仅用于测试和学习研究，禁止用于商业用途，作者不保证其准确性、完整性以及合法性，请使用者依个人情况自行合理判断。
 
-:heavy_exclamation_mark:  因私自用于商业或非法用途，所产生的后果由使用者自负，均与作者无关。
+❗  因私自用于商业或非法用途，所产生的后果由使用者自负，均与作者无关。
 
-:heavy_exclamation_mark:  本仓库项目所有文章及资源，除引用第三方内容外，禁止任何自媒体进行任何形式的转载、发布。
+❗  本仓库项目所有文章及资源，除引用第三方内容外，禁止任何自媒体进行任何形式的转载、发布。
 
-:heavy_exclamation_mark:  若任何单位或个人认为该仓库内容可能存在侵犯其权力的行为，应及时通知作者并提供身份证明、所有权证明，作者在收到之后将在第一时间删除相关内容。
+❗  若任何单位或个人认为该仓库内容可能存在侵犯其权力的行为，应及时通知作者并提供身份证明、所有权证明，作者在收到之后将在第一时间删除相关内容。
 
-:heavy_exclamation_mark:  疫情反复均属未知，请保护好自己，健康生活，认真打卡。
+❗  疫情反复均属未知，请保护好自己，健康生活，认真打卡。
 
-:o:  无论您以任何途径、任何方式，一旦您一经下载或使用本仓库内容，即代表您  :white_check_mark:`已接受`  以上声明，请知悉。
+⭕  无论您以任何途径、任何方式，一旦您一经下载或使用本仓库内容，即代表您  ✅`已接受`  以上声明，请知悉。
 
 ---
 
@@ -50,11 +50,129 @@
 
 **《食用前必读.txt》**真的很重要，**建议阅读**（不听作者言，吃亏在眼前）。
 
+整体的实现逻辑是代码实现打卡，云函数实现自动，邮箱实现成功提醒。
+
+有不少朋友问我有没有其他提醒方式，目前不打算写（以后也不打算），相关缘由可以看看下面的`Q5.为什么不用"喵提醒”、"oushplus推送加“"等公众号作为打卡提醒方式`
+
  **所有文件以及相关代码已在文件列表上传，下载即可使用**
 
 <img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-a23.png" alt="Untitled" style="zoom:67%;" />
 
-## :globe_with_meridians:Fiddler 抓包工具
+
+
+
+
+## 📬QQ邮箱
+
+### 获取授权码
+
+用QQ邮箱发件也需要登录，不是用账号密码，而是授权码（更安全），接下来获取授权码
+
+进入QQ邮箱网页版，进入`设置`，选择`账户`
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-9b5.png" alt="Untitled" style="zoom:67%;" />
+
+往下翻找到 `POP3/SMTP服务`，确保第一项是`已开启`状态，如果不是，点击后面的开启，然后选择下面的`生成授权码`
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-3ed.png" alt="Untitled" style="zoom:67%;" />
+
+根据提示验证后，得到授权码，和抓包步骤一样，把授权码复制保存下来备用。
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-ff9.png" alt="Untitled" style="zoom:67%;" />
+
+## 🌃*上传图片（非必选）
+
+最新的健康打卡存在上传图片的要求，如果检查并不是很严格，可以选择不上传图片。
+
+**如果不填写图片项，代码会默认上传一张纯白色的图片。**
+
+如果需要上传，首先准备好需要上传的图片（一张图片天天传），有必要的话可以p掉图片上的时间
+
+打开云函数控制台，在图示位置鼠标右键，上传即可。
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/061045-a99.png" alt="image-20220806104548153" style="zoom:67%;" />
+
+之后，在代码`修改10`的位置写上图片全名，一定要全名，例如上图的`QRcode.jpg`，所以也建议把准备好的图改一个简单的名字。
+
+## 🐍Python 代码
+
+### 1.经纬度获取
+
+😆嗨害！不需要啦！
+
+### 2.打卡题目
+
+在代码文件中，预设了基本通用的题目答案，但打卡题目不一定都相同，若和下图的题目相同，则无需修改代码。**否则一定要修改代码，请[QQ联系作者](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&website=www.oicqzone.com):link:。**
+
+### 3.日检日报
+
+代码中的“xxx”部分都需要手动填入，其中包括上面步骤中保存的那些内容，**代码文件已上传至文件列表**，**下载即可编辑使用**。
+
+### 4.健康打卡
+
+代码中的“xxx”部分都需要手动填入，其中包括上面步骤中保存的那些内容，**代码文件已上传至文件列表**，**下载即可编辑使用**。
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051741-80a.png" alt="image-20220805174126663" style="zoom:67%;" />
+
+### 5.定位签到
+
+定位签到由作者 **[小白](https://gitee.com/smallway)**:link: 协助完成，点击链接跳转：[我在校园定位签到](https://gitee.com/smallway/autosign):link:。
+
+## 📈阿里云函数
+
+注册过程就不再赘述，注册完记得完成实名认证，这里给出阿里云官网链接：[阿里云(aliyun.com)](https://www.aliyun.com/) :link:
+
+### 1.使用云函数
+
+进入阿里云先登录，搜索`函数计算FC`
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-074.png" alt="Untitled" style="zoom:67%;" />
+
+开通并进入管理界面
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-3b3.png" alt="Untitled" style="zoom:67%;" />
+
+创建一个新服务，名称自定义，其他设置默认即可
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-f01.png" alt="Untitled" style="zoom:67%;" />
+
+进入到刚刚创建的服务，创建一个新函数
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-edb.png" alt="Untitled" style="zoom:67%;" />
+
+按照图示进行设置
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-de2.png" alt="Untitled" style="zoom:67%;" />
+
+这里尤其注意：一定要选择**弹性实例**，涉及到免费额度（`Q6`会做解释）
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-c9d.png" alt="Untitled" style="zoom:67%;" />
+
+创建完成后双击打开代码文件，将上面修改好的代码粘贴进去
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-f77.png" alt="Untitled" style="zoom:67%;" />
+
+部署并调用，会收到邮件
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-01f.png" alt="Untitled" style="zoom:67%;" />
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-643.png" alt="Untitled" style="zoom:67%;" />
+
+### 2.定时触发
+
+设置定时触发之后，就可以按照自己的时间定时运行一次代码，这样就解放了双手
+
+触发器管理 → 创建触发器
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-b20.png" alt="Untitled" style="zoom:67%;" />
+
+触发周期选择自定义，这里要输入 Cron 表达式，健康打卡是每天一次，只要过了零点就可以打卡，所以 Cron 表达式是 `CRON_TZ=Asia/Shanghai 0 01 00 * * *`，表示每天00:01运行一次代码；日检日报是每天三次，这里根据我们学校的时间，我写的是 `CRON_TZ=Asia/Shanghai 0 35 6,12,19 * * * *`，表示每天6:35、12:35、19:35各运行一次；其他设置保持默认即可，点击提交。
+
+教程到这里就结束了，如果需要其他时间打卡，可以直接更改 Cron表达式，为了方便大家更改，关于 Cron 表达式的语法在下面的`Q&A`中也讲解一下
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-1aa.png" alt="Untitled" style="zoom:67%;" />
+
+## 🌐*Fiddler 抓包工具（非必选）
 
 ### 1.安装和配置
 
@@ -110,7 +228,9 @@
 
 复制的内容可以发给你的工具人小伙伴，或者你的小号，总之先保留下来备用。
 
-### 3.*抓取图片（非必选）
+### 3.*抓取图片（已弃用 供学习）
+
+这一部分内容是一开始的4.0版本用到的，但是紧接着4.1就改了，这一部分内容感兴趣的童鞋可以看看研究。
 
 最新的健康打卡存在上传图片的情况，如果检查并不是很严格，可以选择不上传图片。
 
@@ -122,103 +242,7 @@
 
 ![image-20220805173541701](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051735-d11.png)
 
-## :mailbox:QQ邮箱
-
-### 获取授权码
-
-用QQ邮箱发件也需要登录，不是用账号密码，而是授权码（更安全），接下来获取授权码
-
-进入QQ邮箱网页版，进入`设置`，选择`账户`
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-9b5.png" alt="Untitled" style="zoom:67%;" />
-
-往下翻找到 `POP3/SMTP服务`，确保第一项是`已开启`状态，如果不是，点击后面的开启，然后选择下面的`生成授权码`
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-3ed.png" alt="Untitled" style="zoom:67%;" />
-
-根据提示验证后，得到授权码，和抓包步骤一样，把授权码复制保存下来备用。
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-ff9.png" alt="Untitled" style="zoom:67%;" />
-
-## :snake:Python 代码
-
-### 1.经纬度获取
-
-:laughing:嗨害！不需要啦！
-
-### 2.打卡题目
-
-在代码文件中，预设了基本通用的题目答案，但打卡题目不一定都相同，若和下图的题目相同，则无需修改代码。**否则一定要修改代码，请[QQ联系作者](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&website=www.oicqzone.com):link:。**
-
-### 3.日检日报
-
-代码中的“xxx”部分都需要手动填入，其中包括上面步骤中保存的那些内容，**代码文件已上传至文件列表**，**下载即可编辑使用**。
-
-### 4.健康打卡
-
-代码中的“xxx”部分都需要手动填入，其中包括上面步骤中保存的那些内容，**代码文件已上传至文件列表**，**下载即可编辑使用**。
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051741-80a.png" alt="image-20220805174126663" style="zoom:67%;" />
-
-### 5.定位签到
-
-定位签到由作者 **[小白](https://gitee.com/smallway)**:link: 协助完成，点击链接跳转：[我在校园定位签到](https://gitee.com/smallway/autosign):link:。
-
-## :chart_with_upwards_trend:阿里云函数
-
-注册过程就不再赘述，注册完记得完成实名认证，这里给出阿里云官网链接：[阿里云(aliyun.com)](https://www.aliyun.com/) :link:
-
-### 1.使用云函数
-
-进入阿里云先登录，搜索`函数计算FC`
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-074.png" alt="Untitled" style="zoom:67%;" />
-
-开通并进入管理界面
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-3b3.png" alt="Untitled" style="zoom:67%;" />
-
-创建一个新服务，名称自定义，其他设置默认即可
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-f01.png" alt="Untitled" style="zoom:67%;" />
-
-进入到刚刚创建的服务，创建一个新函数
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-edb.png" alt="Untitled" style="zoom:67%;" />
-
-按照图示进行设置
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-de2.png" alt="Untitled" style="zoom:67%;" />
-
-这里尤其注意：一定要选择**弹性实例**，涉及到免费额度（`Q6`会做解释）
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-c9d.png" alt="Untitled" style="zoom:67%;" />
-
-创建完成后双击打开代码文件，将上面修改好的代码粘贴进去
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-f77.png" alt="Untitled" style="zoom:67%;" />
-
-部署并调用，会收到邮件
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-01f.png" alt="Untitled" style="zoom:67%;" />
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-643.png" alt="Untitled" style="zoom:67%;" />
-
-### 2.定时触发
-
-设置定时触发之后，就可以按照自己的时间定时运行一次代码，这样就解放了双手
-
-触发器管理 → 创建触发器
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-b20.png" alt="Untitled" style="zoom:67%;" />
-
-触发周期选择自定义，这里要输入 Cron 表达式，健康打卡是每天一次，只要过了零点就可以打卡，所以 Cron 表达式是 `CRON_TZ=Asia/Shanghai 0 01 00 * * *`，表示每天00:01运行一次代码；日检日报是每天三次，这里根据我们学校的时间，我写的是 `CRON_TZ=Asia/Shanghai 0 35 6,12,19 * * * *`，表示每天6:35、12:35、19:35各运行一次；其他设置保持默认即可，点击提交。
-
-教程到这里就结束了，如果需要其他时间打卡，可以直接更改 Cron表达式，为了方便大家更改，关于 Cron 表达式的语法在下面的`Q&A`中也讲解一下
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-1aa.png" alt="Untitled" style="zoom:67%;" />
-
-## :wheelchair:Q&A
+## ♿Q&A
 
 最后在这里放一个问答板块，如果大家有什么问题可以在评论区提问（评论区可能回复不及时，推荐使用qq联系），我会定期更新在这里
 
