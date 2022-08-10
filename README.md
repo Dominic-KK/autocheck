@@ -2,29 +2,37 @@
 
 ## 📢公告
 
-<div style="border:1px dashed; border-radius:30px; padding:20px">
-<center><strong><font color=green size=5px>✔ 重要更新</font></strong></center>
-<p><font style="font-weight:bold; ">📰 VERSION 4.2</font></p>
-<li>新增题型，可以根据自己的需要选择对应代码😃。</li>
-<li>重写了代码，同时格式化了控制台输出，实用性和可读性更佳😃。</li>
-<li>由于业务更新，旧的版本逐渐无法使用，至此请全部转到本版本😮。</li>
-<li>船新的4.x版精简了教程（尤其是去掉了复杂的抓包过程），增加了代码日志输出，美化了文档，使得整体更加好用和银杏🐣。</li>
+✔ **重要更新**
+
+📰**VERSION 4.2**
+
+- 新增题型，可以根据自己的需要选择对应代码😃。
+- 重写了代码，同时格式化了控制台输出，实用性和可读性更佳😃。
+- 由于业务更新，旧的版本逐渐无法使用，至此请全部转到本版本😮。
+- 船新的`4.x`版精简了教程（尤其是去掉了复杂的抓包过程），增加了代码日志输出，美化了文档，使得整体更加好用和银杏🐣。
+
 <p><strong>- 2022.08.10 21:30 -</strong></p>
-<center><HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="80%" color=#987cb9 SIZE=1></center>
-<center><strong><font color=green size=5px>📢 小喇叭</font></strong></center>
-<p></p>
-<li>学习过程中有任何疑问，请优先从文档最后的 Q&A 寻找答案，两位作者都有自己的事情，不一定能随时回复😄。</li>
-<li>如有学习之前版本的需求，可以点击分支或标签😗。</li>
-<center><img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051946-c5f.png" alt="image-20220805194627169" style="zoom: 67%;" /></center>
-<p></p>
-<center><HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="80%" color=#987cb9 SIZE=3></center>
-<center><strong><font color=green size=5px>📱 联系我</font></strong></center>
-<p></p>
-<li>作者DominicKK  <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&[website=www.oicqzone.com](http://website/%3Dwww.oicqzone.com/)">QQ 3330900358🔗</a></li>
-<li>作者SmallWay  <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1097123142&[website=www.oicqzone.com](http://website/%3Dwww.oicqzone.com/)">QQ 1097123142🔗</a></li>
-<li>欢迎关注我的个人博客： <a href="https://cnblogs.com/dominickk">DominicKK - 博客园🔗</a></li>
-<li>友链： <a href="https://gitee.com/smallway">小白 (smallway) - Gitee.com🔗</a></li>
-</div>
+
+
+
+📢 **小喇叭**
+
+- 学习过程中有任何疑问，请优先从文档最后的`Q&A`寻找答案，两位作者都有自己的事情，不一定能随时回复😄。
+
+- 如有学习之前版本的需求，可以点击分支或标签😗。
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051946-c5f.png" alt="image-20220805194627169" style="zoom: 67%;" />
+
+
+
+📱 **联系我**
+
+- 作者DominicKK  [QQ 3330900358🔗](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&[website=www.oicqzone.com](http://website/%3Dwww.oicqzone.com/))
+- 作者SmallWay  [QQ 1097123142🔗](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1097123142&[website=www.oicqzone.com](http://website/%3Dwww.oicqzone.com/))
+- 欢迎关注我的个人博客：[DominicKK - 博客园🔗](https://cnblogs.com/dominickk/)
+- 友链：[小白 (smallway) - Gitee.com🔗](https://gitee.com/smallway)
+
+
 
 ---
 
@@ -114,19 +122,7 @@
 
 代码中的“xxx”部分都需要手动填入，其中包括上面步骤中保存的那些内容，**代码文件已上传至文件列表**，**下载即可编辑使用**。
 
-<center>------------------------------</center>
-<center>题型①</center>
-<center><small>根据题型选择代码 Type1</small></center>
-
 <img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051741-80a.png" alt="image-20220805174126663" style="zoom:67%;" />
-
-
-
-<center>------------------------------</center>
-<center>题型②</center>
-<center><small>根据题型选择代码 Type2</small></center>
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/102053-51f.png" alt="Type2" style="zoom:67%;" />
 
 ### 5.定位签到
 
