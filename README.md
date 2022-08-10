@@ -2,27 +2,29 @@
 
 ## 📢公告
 
-📰**VERSION 4.1**
-
-- 由于业务更新，旧的版本逐渐无法使用，至此请全部转到本版本😮。
-- 船新的4.x版精简了教程（尤其是去掉了复杂的抓包过程），增加了代码日志输出，美化了文档，使得整体更加好用和银杏🐣。
-- 本版本搞定了图片的上传，使你的打卡更真实😃。
-- 学习过程中有任何疑问，请优先从文档最后的`Q&A`寻找答案，两位作者都有自己的事情，不一定能随时回复😄。
-- 如有学习之前版本的需求，可以点击分支或标签😗。
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051946-c5f.png" alt="image-20220805194627169" style="zoom: 67%;" />
-
-- 作者DominicKK  [QQ 3330900358:link:](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&[website=www.oicqzone.com](http://website/%3Dwww.oicqzone.com/))
-
-- 作者SmallWay  [QQ 1097123142:link:](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1097123142&[website=www.oicqzone.com](http://website/%3Dwww.oicqzone.com/))
-
-- 欢迎关注我的个人博客：[DominicKK - 博客园](https://cnblogs.com/dominickk/):link:
-
-- 友链：[小白 (smallway) - Gitee.com](https://gitee.com/smallway):link:
-
-<p><strong>- 2022.08.05 20:00 -</strong></p>
-
-
+<div style="border:1px dashed; border-radius:30px; padding:20px">
+<center><strong><font color=green size=5px>✔ 重要更新</font></strong></center>
+<p><font style="font-weight:bold; ">📰 VERSION 4.2</font></p>
+<li>新增题型，可以根据自己的需要选择对应代码😃。</li>
+<li>重写了代码，同时格式化了控制台输出，实用性和可读性更佳😃。</li>
+<li>由于业务更新，旧的版本逐渐无法使用，至此请全部转到本版本😮。</li>
+<li>船新的4.x版精简了教程（尤其是去掉了复杂的抓包过程），增加了代码日志输出，美化了文档，使得整体更加好用和银杏🐣。</li>
+<p><strong>- 2022.08.10 21:30 -</strong></p>
+<center><HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="80%" color=#987cb9 SIZE=1></center>
+<center><strong><font color=green size=5px>📢 小喇叭</font></strong></center>
+<p></p>
+<li>学习过程中有任何疑问，请优先从文档最后的 Q&A 寻找答案，两位作者都有自己的事情，不一定能随时回复😄。</li>
+<li>如有学习之前版本的需求，可以点击分支或标签😗。</li>
+<center><img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051946-c5f.png" alt="image-20220805194627169" style="zoom: 67%;" /></center>
+<p></p>
+<center><HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="80%" color=#987cb9 SIZE=3></center>
+<center><strong><font color=green size=5px>📱 联系我</font></strong></center>
+<p></p>
+<li>作者DominicKK  <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&[website=www.oicqzone.com](http://website/%3Dwww.oicqzone.com/)">QQ 3330900358🔗</a></li>
+<li>作者SmallWay  <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1097123142&[website=www.oicqzone.com](http://website/%3Dwww.oicqzone.com/)">QQ 1097123142🔗</a></li>
+<li>欢迎关注我的个人博客： <a href="https://cnblogs.com/dominickk">DominicKK - 博客园🔗</a></li>
+<li>友链： <a href="https://gitee.com/smallway">小白 (smallway) - Gitee.com🔗</a></li>
+</div>
 
 ---
 
@@ -102,7 +104,7 @@
 
 ### 2.打卡题目
 
-在代码文件中，预设了基本通用的题目答案，但打卡题目不一定都相同，若和下图的题目相同，则无需修改代码。**否则一定要修改代码，请[QQ联系作者](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&website=www.oicqzone.com):link:。**
+在代码文件中，预设了基本通用的题目答案，但打卡题目不一定都相同，若和下图的题目相同，则无需修改代码。**否则一定要修改代码，请[QQ联系作者](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&website=www.oicqzone.com)🔗。**
 
 ### 3.日检日报
 
@@ -112,15 +114,27 @@
 
 代码中的“xxx”部分都需要手动填入，其中包括上面步骤中保存的那些内容，**代码文件已上传至文件列表**，**下载即可编辑使用**。
 
+<center>------------------------------</center>
+<center>题型①</center>
+<center><small>根据题型选择代码 Type1</small></center>
+
 <img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051741-80a.png" alt="image-20220805174126663" style="zoom:67%;" />
+
+
+
+<center>------------------------------</center>
+<center>题型②</center>
+<center><small>根据题型选择代码 Type2</small></center>
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/102053-51f.png" alt="Type2" style="zoom:67%;" />
 
 ### 5.定位签到
 
-定位签到由作者 **[小白](https://gitee.com/smallway)**:link: 协助完成，点击链接跳转：[我在校园定位签到](https://gitee.com/smallway/autosign):link:。
+定位签到由作者 **[小白](https://gitee.com/smallway)**🔗 协助完成，点击链接跳转：[我在校园定位签到](https://gitee.com/smallway/autosign)🔗。
 
 ## 📈阿里云函数
 
-注册过程就不再赘述，注册完记得完成实名认证，这里给出阿里云官网链接：[阿里云(aliyun.com)](https://www.aliyun.com/) :link:
+注册过程就不再赘述，注册完记得完成实名认证，这里给出阿里云官网链接：[阿里云(aliyun.com)](https://www.aliyun.com/) 🔗
 
 ### 1.使用云函数
 
@@ -178,7 +192,7 @@
 
 安装包下载：Fiddler 安装包和 Fiddler 证书生成器
 
-蓝奏云链接：https://dominic.lanzouq.com/iKszLzyh5gh :link:
+蓝奏云链接：https://dominic.lanzouq.com/iKszLzyh5gh 🔗
 
 下载后解压，先双击 `FiddlerSetup.exe` 进行安装，另一个是证书生成器，暂时不用。
 
@@ -317,7 +331,7 @@ Cron表达式有7个字段，以空格分割
 
 原因只有一个：麻烦。
 
-用过的同学应该知道，这些提醒类公众号都有一个共性：需要发送激活48小时消息，也就是发送激活消息后才能收到提醒，这是为什么？这并不是公众号博主为了广告效应或是其他，而是由于公众号的后台限制：公众号后台无法回复用户超过48小时的消息（参考官方解释：[客服帐号管理 | 微信开放文档 (qq.com)](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Service_Center_messages.html) :link:）；那么自然无法发送打卡成功的提醒。
+用过的同学应该知道，这些提醒类公众号都有一个共性：需要发送激活48小时消息，也就是发送激活消息后才能收到提醒，这是为什么？这并不是公众号博主为了广告效应或是其他，而是由于公众号的后台限制：公众号后台无法回复用户超过48小时的消息（参考官方解释：[客服帐号管理 | 微信开放文档 (qq.com)](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Service_Center_messages.html) 🔗）；那么自然无法发送打卡成功的提醒。
 
 但是，如果真的喜欢用微信作为提醒渠道，可以参考上面`Q2：如何第一时间收到QQ邮件`即可
 
@@ -329,7 +343,7 @@ Cron表达式有7个字段，以空格分割
 
 ### 7.阿里云函数计算FC免费额度
 
-详情参考[官方帮助文档](https://help.aliyun.com/document_detail/54301.html) :link:
+详情参考[官方帮助文档](https://help.aliyun.com/document_detail/54301.html) 🔗
 
 **注意：**免费额度仅适用**弹性实例**，并且函数使用过程产生的**公网出流量不在免费额度中**，但其费用极小，几乎可以忽略，如有产生相关费用，支付即可（几毛几分钱没有人会特别在意的吧）
 
@@ -359,7 +373,7 @@ Cron表达式有7个字段，以空格分割
 
 **卸载证书 - 重启电脑 - 重装证书**
 
-抓包失败的原因是证书安装失败，需要重装，参考：[Fiddler证书清除并重新配置](https://blog.csdn.net/w6082819920919/article/details/112174650):link:
+抓包失败的原因是证书安装失败，需要重装，参考：[Fiddler证书清除并重新配置](https://blog.csdn.net/w6082819920919/article/details/112174650)🔗
 
 **注意**：卸载干净后一定重启电脑，再重装！
 
@@ -371,7 +385,7 @@ Cron表达式有7个字段，以空格分割
 
 ### 9.抓不到小程序
 
-是由于小程序的更新，可以参考：[fiddler抓包PC微信小程序失败解决方案](https://www.jianshu.com/p/f87512ed7b21):link:
+是由于小程序的更新，可以参考：[fiddler抓包PC微信小程序失败解决方案](https://www.jianshu.com/p/f87512ed7b21)🔗
 
 该方案只可以临时使用，下次抓包可能还需要处理一次
 
@@ -379,7 +393,7 @@ Cron表达式有7个字段，以空格分割
 
 推荐使用安卓手机，抓包时一定把电脑和手机连接同一个wifi
 
-参考：[使用Fiddler实现手机抓包 - EastJason - 博客园 (cnblogs.com)](https://www.cnblogs.com/eastnapoleon/p/14654451.html):link:
+参考：[使用Fiddler实现手机抓包 - EastJason - 博客园 (cnblogs.com)](https://www.cnblogs.com/eastnapoleon/p/14654451.html)🔗
 
 
 
