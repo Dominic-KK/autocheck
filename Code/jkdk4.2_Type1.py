@@ -1,6 +1,5 @@
 import base64
 import json
-import logging
 import random
 import smtplib
 import time
@@ -192,7 +191,7 @@ class observer:
             return "！！！快来看看，这咋滴了"
 
 
-if __name__ == "__main__":
+def run():
     myLogin = loginUser()
     loginRes = checkRes = emailRes = {'status': False}
     loginRes = myLogin.login()
@@ -200,12 +199,6 @@ if __name__ == "__main__":
         myCheck = checker(loginRes['data'])
         checkRes = myCheck.check_jkdk()
     emailRes = observer(checkRes['code']).sendEmail()
-
-
-def handler(event, context):
-    logger = logging.getLogger()
-    logger.setLevel(logging.INFO)
-    logger.info('got event{}'.format(event))
     res = {'@Author ': 'Dominic&Smallway'}
     if not loginRes['status']:
         res['Login Exception': 'Please read the console log.']
@@ -213,6 +206,12 @@ def handler(event, context):
         res['Check Exception': 'Please read the console log.']
     if not emailRes['status']:
         res['Email Exception': 'Please read the console log.']
-
     return res
 
+
+if __name__ == "__main__":
+    run()
+
+
+def handler(event, context):
+    return run()
