@@ -155,17 +155,18 @@ def run():
     myLogin = loginUser()
     loginRes = checkRes = emailRes = {'status': False}
     loginRes = myLogin.login()
+    checkRes['code'] = -10
     if loginRes['status']:
         myCheck = checker(loginRes['data'])
         checkRes = myCheck.check_jkdk()
     emailRes = observer(checkRes['code']).sendEmail()
     res = {'@Author ': 'Dominic&Smallway'}
     if not loginRes['status']:
-        res['Login Exception': 'Please read the console log.']
+        res['Login Exception'] = 'Please read the console log.'
     if not checkRes['status']:
-        res['Check Exception': 'Please read the console log.']
+        res['Check Exception'] = 'Please read the console log.'
     if not emailRes['status']:
-        res['Email Exception': 'Please read the console log.']
+        res['Email Exception'] = 'Please read the console log.'
     return res
 
 

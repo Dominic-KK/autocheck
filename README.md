@@ -2,7 +2,13 @@
 
 ## 📢公告
 
-✔ **重要更新**
+✔ **小更新**
+
+📰**VERSION 4.2-Bugfix**
+
+- 修复了几个已知Bug🐣。
+
+<p><strong>- 2022.11.26 16:00 -</strong></p>
 
 📰**VERSION 4.2**
 
@@ -21,16 +27,22 @@
 
 - 如有学习之前版本的需求，可以点击分支或标签😗。
 
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051946-c5f.png" alt="image-20220805194627169" style="zoom: 67%;" />
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/11/261614-053.png" alt="image-20221126161452095" style="zoom:67%;" />
 
 
 
-📱 **联系我**
+🔖 To Do List
 
-- 作者DominicKK  [QQ 3330900358🔗](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&[website=www.oicqzone.com](http://website/%3Dwww.oicqzone.com/))
-- 作者SmallWay  [QQ 1097123142🔗](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1097123142&[website=www.oicqzone.com](http://website/%3Dwww.oicqzone.com/))
+- 钉钉机器人提醒
+- TG机器人提醒
+
+
+
+📱 **联系我们**
+
+- 唯一TG频道：[魔仙堡](https://t.me/+a1YjQzGpTKM3OGNl)
 - 欢迎关注我的个人博客：[DominicKK - 博客园🔗](https://cnblogs.com/dominickk/)
-- 友链：[小白 (smallway) - Gitee.com🔗](https://gitee.com/smallway)
+- 友链：[小白 (smallway) - Github.com🔗](https://github.com/smallway233)
 
 
 
@@ -62,11 +74,11 @@
 
 整体的实现逻辑是代码实现打卡，云函数实现自动，邮箱实现成功提醒。
 
-有不少朋友问我有没有其他提醒方式，目前不打算写（以后也不打算），相关缘由可以看看下面的`Q5.为什么不用"喵提醒”、"oushplus推送加“"等公众号作为打卡提醒方式`
+有不少朋友问我有没有微信公众号提醒方式，目前不打算写（以后也不打算），相关缘由可以看看下面的`Q5.为什么不用"喵提醒”、"oushplus推送加“"等公众号作为打卡提醒方式`
 
  **所有文件以及相关代码已在文件列表上传，下载即可使用**
 
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-a23.png" alt="Untitled" style="zoom:67%;" />
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/11/261613-b08.png" alt="image-20221126161312697" style="zoom:67%;" />
 
 
 
@@ -112,7 +124,7 @@
 
 ### 2.打卡题目
 
-在代码文件中，预设了基本通用的题目答案，但打卡题目不一定都相同，若和下图的题目相同，则无需修改代码。**否则一定要修改代码，请[QQ联系作者](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3330900358&website=www.oicqzone.com)🔗。**
+在代码文件中，预设了基本通用的题目答案，但打卡题目不一定都相同，若和下图的题目相同，则无需修改代码。**否则一定要修改代码。**
 
 ### 3.日检日报
 
@@ -126,7 +138,7 @@
 
 ### 5.定位签到
 
-定位签到由作者 **[小白](https://gitee.com/smallway)**🔗 协助完成，点击链接跳转：[我在校园定位签到](https://gitee.com/smallway/autosign)🔗。
+定位签到由作者 **[小白](https://github.com/smallway233)**🔗 协助完成，点击链接跳转：[我在校园定位签到](https://github.com/smallway233/autosign)🔗。
 
 ## 📈阿里云函数
 
