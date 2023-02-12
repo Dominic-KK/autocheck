@@ -4,6 +4,19 @@
 
 ✔ **小更新**
 
+📰**VERSION 4.3**
+
+⚠本次更新需要新增一个依赖包，具体操作翻阅最下面的`Q11 新增依赖包fun_timeout`
+
+- 跟进新题型的更新😃。
+- 新增钉钉机器人提醒，打卡失败时会`@你`哦😄。
+- 新增登录态保持，避免每次执行时登录😄。
+- 新增修改密码功能，密码错误时会发出提醒，并受到验证码短信，需要及时在控制台输入验证码😮。
+- 重构代码，优化控制台输出，可读性更佳😃。
+- 更新文档，替换旧的教程及步骤截图😃。
+
+<p><strong>- 2023/2/12 16:21 -</strong></p>
+
 📰**VERSION 4.2-Bugfix**
 
 - 修复了几个已知Bug🐣。
@@ -33,7 +46,6 @@
 
 🔖 To Do List
 
-- 钉钉机器人提醒
 - TG机器人提醒
 
 
@@ -82,40 +94,6 @@
 
 
 
-
-
-## 📬QQ邮箱
-
-### 获取授权码
-
-用QQ邮箱发件也需要登录，不是用账号密码，而是授权码（更安全），接下来获取授权码
-
-进入QQ邮箱网页版，进入`设置`，选择`账户`
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-9b5.png" alt="Untitled" style="zoom:67%;" />
-
-往下翻找到 `POP3/SMTP服务`，确保第一项是`已开启`状态，如果不是，点击后面的开启，然后选择下面的`生成授权码`
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-3ed.png" alt="Untitled" style="zoom:67%;" />
-
-根据提示验证后，得到授权码，和抓包步骤一样，把授权码复制保存下来备用。
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-ff9.png" alt="Untitled" style="zoom:67%;" />
-
-## 🌃*上传图片（非必选）
-
-最新的健康打卡存在上传图片的要求，如果检查并不是很严格，可以选择不上传图片。
-
-**如果不填写图片项，代码会默认上传一张纯白色的图片。**
-
-如果需要上传，首先准备好需要上传的图片（一张图片天天传），有必要的话可以p掉图片上的时间
-
-打开云函数控制台，在图示位置鼠标右键，上传即可。
-
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/061045-a99.png" alt="image-20220806104548153" style="zoom:67%;" />
-
-之后，在代码`修改10`的位置写上图片全名，一定要全名，例如上图的`QRcode.jpg`，所以也建议把准备好的图改一个简单的名字。
-
 ## 🐍Python 代码
 
 ### 1.经纬度获取
@@ -128,13 +106,13 @@
 
 ### 3.日检日报
 
-代码中的“xxx”部分都需要手动填入，其中包括上面步骤中保存的那些内容，**代码文件已上传至文件列表**，**下载即可编辑使用**。
+此版本暂时没有这个功能。
 
 ### 4.健康打卡
 
 代码中的“xxx”部分都需要手动填入，其中包括上面步骤中保存的那些内容，**代码文件已上传至文件列表**，**下载即可编辑使用**。
 
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/051741-80a.png" alt="image-20220805174126663" style="zoom:67%;" />
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/130017-7c6.png" alt="image-20230213001701025" style="zoom:67%;" />
 
 ### 5.定位签到
 
@@ -164,21 +142,35 @@
 
 按照图示进行设置
 
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-de2.png" alt="Untitled" style="zoom:67%;" />
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/122352-a8e.png" alt="image-20230212235221889" style="zoom:67%;" />
 
-这里尤其注意：一定要选择**弹性实例**，涉及到免费额度（`Q6`会做解释）
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/122353-2d4.png" alt="image-20230212235258925" style="zoom:67%;" />
 
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-c9d.png" alt="Untitled" style="zoom:67%;" />
+这里尤其注意：一定要设置**超时时间**
 
-创建完成后双击打开代码文件，将上面修改好的代码粘贴进去
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/122353-fcc.png" alt="image-20230212235343789" style="zoom:67%;" />
+
+
+
+创建完成后双击打开代码文件，将代码粘贴进去，**并根据要求填入信息**
 
 <img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-f77.png" alt="Untitled" style="zoom:67%;" />
 
-部署并调用，会收到邮件
+执行代码
 
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-01f.png" alt="Untitled" style="zoom:67%;" />
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/122347-0ee.png" alt="image-20230212234718606" style="zoom:67%;" />
 
-<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-643.png" alt="Untitled" style="zoom:67%;" />
+不出意外的话会出现意外，请翻到最下面的`Q11 新增依赖包fun_timeout` 来解决
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/130009-8ce.png" alt="image-20230213000915056" style="zoom:67%;" />
+
+成功则会在控制台看到信息，如果需要邮件和钉钉提醒功能，请翻阅下面的教程
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/122349-ac9.png" alt="image-20230212234939307" style="zoom:67%;" />
+
+最后一定要**部署代码**
+
+![image-20230213001126998](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/130011-670.png)
 
 ### 2.定时触发
 
@@ -188,11 +180,64 @@
 
 <img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-b20.png" alt="Untitled" style="zoom:67%;" />
 
-触发周期选择自定义，这里要输入 Cron 表达式，健康打卡是每天一次，只要过了零点就可以打卡，所以 Cron 表达式是 `CRON_TZ=Asia/Shanghai 0 01 00 * * *`，表示每天00:01运行一次代码；日检日报是每天三次，这里根据我们学校的时间，我写的是 `CRON_TZ=Asia/Shanghai 0 35 6,12,19 * * * *`，表示每天6:35、12:35、19:35各运行一次；其他设置保持默认即可，点击提交。
-
-教程到这里就结束了，如果需要其他时间打卡，可以直接更改 Cron表达式，为了方便大家更改，关于 Cron 表达式的语法在下面的`Q&A`中也讲解一下
+触发周期选择自定义，这里要输入 Cron 表达式，例如 `CRON_TZ=Asia/Shanghai 0 01 00 * * *`，表示每天00:01运行一次代码；例如 `CRON_TZ=Asia/Shanghai 0 35 6,12,19 * * * *`，表示每天6:35、12:35、19:35各运行一次；其他设置保持默认即可，点击提交。如果需要其他时间打卡，可以直接更改 Cron表达式，为了方便大家更改，关于 Cron 表达式的语法在下面的`Q&A`中也讲解一下
 
 <img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-1aa.png" alt="Untitled" style="zoom:67%;" />
+## 📬*提醒功能：QQ邮箱（自选）
+
+### 获取授权码
+
+用QQ邮箱发件也需要登录，不是用账号密码，而是授权码（更安全），接下来获取授权码
+
+进入QQ邮箱网页版，进入`设置`，选择`账户`
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-9b5.png" alt="Untitled" style="zoom:67%;" />
+
+往下翻找到 `POP3/SMTP服务`，确保第一项是`已开启`状态，如果不是，点击后面的开启，然后选择下面的`生成授权码`
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-3ed.png" alt="Untitled" style="zoom:67%;" />
+
+根据提示验证后，得到授权码，和抓包步骤一样，把授权码复制保存下来备用。
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/06/031900-ff9.png" alt="Untitled" style="zoom:67%;" />
+
+## 📳*提醒功能：钉钉机器人（自选）
+
+### 创建机器人
+
+首先需要有一个只有你自己的钉钉群（只是为了避免打扰别人啦），手机端钉钉面对面建群即可实现单人群的创建，这里就省略步骤了。
+
+在群内新建一个机器人，点击群设置，找到`智能群助手`
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/122333-65a.png" alt="image-20230212233353325" style="zoom:67%;" />
+
+添加机器人
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/122334-ce9.png" alt="image-20230212233439383" style="zoom: 80%;" />
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/122335-af4.png" alt="image-20230212233459703" style="zoom:67%;" />
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/122335-376.png" alt="image-20230212233526567" style="zoom:67%;" />
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/122337-c44.png" alt="image-20230212233744180" style="zoom:67%;" />
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/122338-352.png" alt="image-20230212233833900" style="zoom:67%;" />
+
+之后将复制到的webhook链接、密钥都写入代码的对应位置即可。
+
+## 🌃*上传图片（非必选）
+
+最新的健康打卡可能存在上传图片的要求，如果检查并不是很严格，可以选择不上传图片。
+
+**如果不填写图片项，代码会默认上传一张纯白色的图片。**
+
+如果需要上传，首先准备好需要上传的图片（一张图片天天传），有必要的话可以p掉图片上的时间
+
+打开云函数控制台，在图示位置鼠标右键，上传即可。
+
+<img src="https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2022/08/061045-a99.png" alt="image-20220806104548153" style="zoom:67%;" />
+
+之后，在代码`修改10`的位置写上图片全名，一定要全名，例如上图的`QRcode.jpg`，所以也建议把准备好的图改一个简单的名字。
 
 ## 🌐*Fiddler 抓包工具（非必选）
 
@@ -403,7 +448,14 @@ Cron表达式有7个字段，以空格分割
 
 参考：[使用Fiddler实现手机抓包 - EastJason - 博客园 (cnblogs.com)](https://www.cnblogs.com/eastnapoleon/p/14654451.html)🔗
 
+### 11.新增依赖包`fun_timeout`
 
+#### 云函数安装
 
+在云函数控制台输入`pip install -t . fun_timeout`
 
+![image-20230213000619542](https://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/02/130006-68f.png)
 
+#### 本地安装
+
+在本机终端输入`pip install fun_timeout`
