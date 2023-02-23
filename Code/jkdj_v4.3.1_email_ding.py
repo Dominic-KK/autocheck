@@ -50,12 +50,12 @@ def login():
     url = login_url + "username=" + account + "&password=" + password
     session.headers['Referer'] = "https://gw.wozaixiaoyuan.com/h5/mobile/basicinfo/index/login/index"
     resp = session.post(url, data="{}")
-    session.headers['JWSESSION'] = resp.headers['JWSESSION']
-    w_session(session.headers)
     res = json.loads(resp.text)
     res['status'] = -10000
     if res["code"] == 0:
         print("√ 登录成功。")
+        session.headers['JWSESSION'] = resp.headers['JWSESSION']
+        w_session(session.headers)
         check_jkdk()
     elif res['code'] == 101:
         print("× 密码异常，请修改！")
@@ -205,22 +205,25 @@ def get_status(status):
 # 发送提醒
 def observer(res):
     status = res['status']
+    msg=''
+    if 'message' in res.keys():
+        msg='\n\n服务器消息\n'+res['message']
     if mySender and myToken and myReceiver:
         print('√ 执行邮件提醒')
-        send_email(status)
+        send_email(status,msg)
     else:
         print('× 未启用邮件提醒')
     if myWebhook and mySecret:
         print('√ 执行钉钉提醒')
-        send_ding(status)
+        send_ding(status,msg)
     else:
         print('× 未启用钉钉提醒')
 
 
 # 发送邮件
-def send_email(status):
+def send_email(status,s_msg):
     try:
-        msg = MIMEText("冤种！  " + get_status(status), 'plain', 'utf-8')
+        msg = MIMEText("🌹我可以不在校园🌹\n" + get_status(status)+s_msg, 'plain', 'utf-8')
         msg['From'] = formataddr(["🌹我可以不在校园🌹", mySender])  # 双引号内是发件人昵称，可以自定义
         msg['To'] = formataddr(["不爱打卡的大冤种", myReceiver])  # 双引号内是收件人邮箱昵称，可以自定义
         msg['Subject'] = get_status(status)
@@ -236,7 +239,7 @@ def send_email(status):
 
 
 # 发送钉钉
-def send_ding(status):
+def send_ding(status,s_msg):
     url = myWebhook
     secret = mySecret
     timestamp = round(time.time() * 1000)  # 时间戳
@@ -253,7 +256,7 @@ def send_ding(status):
     send_data = {
         "msgtype": "text",
         "text": {
-            "content": "🌹我可以不在校园🌹\n" + get_status(status)
+            "content": "🌹我可以不在校园🌹\n" + get_status(status)+s_msg
         }
     }
     if status is not 0:
@@ -289,7 +292,7 @@ def run():
     checkRes = {'status': False}
     checkRes = check_jkdk()
     res = {'@Author ': 'Dominic&Smallway'}
-    if not checkRes['status']:
+    if checkRes['status'] != 0:
         res['Check Exception'] = 'Please read the console log.'
     return res
 
