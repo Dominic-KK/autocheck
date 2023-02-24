@@ -7,6 +7,7 @@
 📰**VERSION 4.3.1**
 
 - 修复已知bug
+- 针对本版本的`Process exited unexpectedly before completing request (duration: 827ms, maxMemoryUsage: 18MB)`错误，请首先在云函数编辑器内执行一次（点击编辑器右上的三角形），再通过`部署代码` `测试函数`运行
 
 📰**VERSION 4.3**
 
